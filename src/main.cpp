@@ -88,16 +88,16 @@ void UpdateDrawFrame()
     {
         DrawPhysicsObject(boxObject);
 
-        b2Vec2 movementVelocity = {0, 0};
+        // b2Vec2 movementVelocity = {0, 0};
 
-        float movementSpeed = 200.0f;
+        // float movementSpeed = 200.0f;
 
-        if (IsKeyDown(KEY_W)) movementVelocity.y = -movementSpeed;
-        if (IsKeyDown(KEY_S)) movementVelocity.y = movementSpeed;
-        if (IsKeyDown(KEY_A)) movementVelocity.x = -movementSpeed;
-        if (IsKeyDown(KEY_D)) movementVelocity.x = movementSpeed;
+        // if (IsKeyDown(KEY_W)) movementVelocity.y = -movementSpeed;
+        // if (IsKeyDown(KEY_S)) movementVelocity.y = movementSpeed;
+        // if (IsKeyDown(KEY_A)) movementVelocity.x = -movementSpeed;
+        // if (IsKeyDown(KEY_D)) movementVelocity.x = movementSpeed;
 
-        b2Body_SetLinearVelocity(boxObject.physicsBody, movementVelocity);
+        // b2Body_SetLinearVelocity(boxObject.physicsBody, movementVelocity);
     }
 
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
@@ -148,7 +148,7 @@ int main(void)
 
     b2WorldDef worldDefinition = b2DefaultWorldDef();
 
-    worldDefinition.gravity = { 1.0f, 1.0f };
+    worldDefinition.gravity = { 10.0f, 1000.0f };
 
     physicsWorld = b2CreateWorld(&worldDefinition);
 
